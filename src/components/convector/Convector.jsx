@@ -15,11 +15,11 @@ function Convector () {
    
   /* Значение кошелька */
   const [currencyData] = useState([
-    { code: 'USD', balance: 2950, image: '/Convector.react/images/USD.png' },
-    { code: 'EUR', balance: 1800, image: '/Convector.react/images/EUR.png' },
-    { code: 'RUB', balance: 600000, image: '/Convector.react/images/RUB.png' },
-    { code: 'GEL', balance: 39000, image: '/Convector.react/images/GEL.png' },
-    { code: 'AMD', balance: 400850, image: '/Convector.react/images/AMD.png' }
+    { code: 'USD', balance: 2950, image: '/Convector.react/USD.png' },
+    { code: 'EUR', balance: 1800, image: '/Convector.react/EUR.png' },
+    { code: 'RUB', balance: 600000, image: '/Convector.react/RUB.png' },
+    { code: 'GEL', balance: 39000, image: '/Convector.react/GEL.png' },
+    { code: 'AMD', balance: 400850, image: '/Convector.react/AMD.png' }
   ])
 
   /* Локальные курсы валют */
