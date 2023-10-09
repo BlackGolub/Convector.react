@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Convector.react/static/css/main.2ca8ccfc.css",
-    "main.js": "/Convector.react/static/js/main.9e8d64ae.js",
+    "main.css": "/Convector.react/static/css/main.411c4335.css",
+    "main.js": "/Convector.react/static/js/main.3c057f9b.js",
     "index.html": "/Convector.react/index.html",
-    "main.2ca8ccfc.css.map": "/Convector.react/static/css/main.2ca8ccfc.css.map",
-    "main.9e8d64ae.js.map": "/Convector.react/static/js/main.9e8d64ae.js.map"
+    "main.411c4335.css.map": "/Convector.react/static/css/main.411c4335.css.map",
+    "main.3c057f9b.js.map": "/Convector.react/static/js/main.3c057f9b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ca8ccfc.css",
-    "static/js/main.9e8d64ae.js"
+    "static/css/main.411c4335.css",
+    "static/js/main.3c057f9b.js"
   ]
 }
