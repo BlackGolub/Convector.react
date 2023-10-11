@@ -1,10 +1,15 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { IoIosArrowBack } from 'react-icons/io';
+import Home from '../home/HomePage';
 import Decimal from 'decimal.js';
 import styles from './Convector.module.css';
 import Keyboard from './keyboard/Keyboard.jsx';
 import CurrencyList from './currencylist/Currencylist';
 import WalletPoint from './currencydata/CurrencyData.jsx';
 import Popup from './popup/Popup';
+import { Wallet, course } from '../home/Wallet';
+
 
 function Convector () {
   const [inputValue, setInputValue] = useState('')
@@ -12,44 +17,8 @@ function Convector () {
   const [selectedCurrencyBot, setSelectedCurrencyBot] = useState('USD');
   const [balance, setBalance] = useState('0');
   const [isRed, setIsRed] = useState(false);
-   
-  /* Значение кошелька */
-  const [currencyData] = useState([
-    { code: 'USD', balance: 2950, image: '/Convector.react/USD.png' },
-    { code: 'EUR', balance: 1800, image: '/Convector.react/EUR.png' },
-    { code: 'RUB', balance: 600000, image: '/Convector.react/RUB.png' },
-    { code: 'GEL', balance: 39000, image: '/Convector.react/GEL.png' },
-    { code: 'AMD', balance: 400850, image: '/Convector.react/AMD.png' }
-  ])
 
-  /* Локальные курсы валют */
-  const course = useMemo(() => ({
-    USDEUR: 1.06,
-    EURUSD: 0.943612,
-    RUBEUR: 0.009805,
-    EURRUB: 101.99,
-    GELEUR: 0.353664,
-    EURGEL: 2.83,
-    AMDEUR: 0.002434,
-    EURAMD: 410.88,
-    RUBUSD: 0.010412,
-    USDRUB: 96.24,
-    RUBGEL: 0.027724,
-    GELRUB: 36.07,
-    RUBAMD: 4.03,
-    AMDGEL: 0.006882,
-    GELUSD: 0.372038,
-    AMDUSD: 0.002582, 
-    USDGEL: 2.68,
-    USDAMD: 429.14,
-    GELAMD: 160.12,
-    AMDRUB: 0.231755,
-    USDUSD: 1,
-    GELGEL: 1,
-    AMDAMD: 1,
-    EUREUR: 1,
-    RUBRUB: 1,
-  }), []);
+
 
   /* Отслеживание выбранных валют */
   const handleCurrencyChange = (currency, location) => {
@@ -97,7 +66,7 @@ function Convector () {
       numericValue = balance;
       setInputValue(formatNumber(numericValue));
     }
-  }, [inputValue, balance, setInputValue, selectedCurrencyTop, course]);
+  }, [inputValue, balance, setInputValue, selectedCurrencyTop]);
 
   /* Форматирование конвертации вывод */
   const formatNumber = (number) => {
@@ -135,8 +104,8 @@ function Convector () {
     const numericConvertValue = parseFloat(convertValueResult);
     
     if (!isNaN(numericInputValue) && !isNaN(numericConvertValue)) {
-      const selectedCurrencyTopItem = currencyData.find((item) => item.code === selectedCurrencyTop);
-      const selectedCurrencyBotItem = currencyData.find((item) => item.code === selectedCurrencyBot);
+      const selectedCurrencyTopItem = Wallet.find((item) => item.code === selectedCurrencyTop);
+      const selectedCurrencyBotItem = Wallet.find((item) => item.code === selectedCurrencyBot);
       
       selectedCurrencyTopItem.balance -= numericInputValue;
       selectedCurrencyBotItem.balance += numericConvertValue
@@ -148,21 +117,21 @@ function Convector () {
 
   return(
     <div className={styles.content}>
-      <button className={styles.back}> &#5193;</button>
-      <h1>Convert</h1>
+      <Link to="/" element={<Home />} className={styles.back}><IoIosArrowBack /></Link>
+      <h1 className={styles.convert_h1}>Convert</h1>
       <div className={styles.entering_currency}>
-        <h2>Send</h2>
+        <h2 className={styles.convert_h2}>Send</h2>
         <input className={styles.entering_left} id='show_keyboard' value={inputValue} onChange={handleButtonClick}></input>
         <CurrencyList id='top' initialSelectedCurrency="RUB" updateSelectedCurrency={(currency) => handleCurrencyChange(currency, 'top')}/>
       </div>
       <input className={styles.convert} type="checkbox" id="checkbox-convert" onChange={calculateBalance}/>
         <label htmlFor="checkbox-convert" className={styles.convert_label} id="dark">&#8645;</label>
       <div className={styles.conclusion_currency}>
-        <h2>Receive</h2>
+        <h2  className={styles.convert_h2}>Receive</h2>
         <input className={styles.entering_left} id='show_keyboard' value={convertValue()} onChange={handleButtonClick}></input>
         <CurrencyList id='bot' initialSelectedCurrency="USD" updateSelectedCurrency={(currency) => handleCurrencyChange(currency, 'bot')}/>
       </div>
-        <WalletPoint selectedCurrency={selectedCurrencyTop} setBalance={setBalance} currencyData={currencyData}/>
+        <WalletPoint selectedCurrency={selectedCurrencyTop} setBalance={setBalance} currencyData={Wallet}/>
       <div className={styles.tax}>
         <Popup />
         <div className={`${styles.tax_lvl} ${isRed ? styles.red : ''}`}>40$</div>

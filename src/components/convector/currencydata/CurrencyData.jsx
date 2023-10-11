@@ -52,7 +52,7 @@ function WalletPoint({ selectedCurrency, setBalance, currencyData }) {
       {portfolioVisible && (
             <div>
                 <div className={styles.wallet_blackout}></div>
-                <div className={styles.wallet_content}>
+                  <div className={styles.wallet_content}>
                     <h5 className={styles.wallet_heading}>Wallet Balance</h5>
                     <div className={styles.wallet_balance}>
                       {currencyData.map((currency, index) => (
@@ -64,7 +64,7 @@ function WalletPoint({ selectedCurrency, setBalance, currencyData }) {
                       ))}
                     </div>
                     <button onClick={closeBalance} className={styles.button_balance}>Close</button>
-                </div>
+                  </div>
             </div>
         )}
       <div className={styles.wallet_point}>

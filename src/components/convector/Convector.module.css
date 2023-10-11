@@ -4,6 +4,10 @@
 }
 
 .back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     position: absolute;
     left: 5%;
     top: 5%;
@@ -93,7 +97,7 @@ h2::before {
     align-items: self-end;
 }
 
-h1{
+.convert_h1{
     position: absolute;
     left: 48%;
     top: 5%;
@@ -101,7 +105,7 @@ h1{
     font-size: 40px;
 }
 
-h2 {
+.convert_h2{
     position: absolute;
     left: 3%;
     top: 25%;
@@ -162,44 +166,18 @@ h4{
     color: black;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    h1{
+@media (min-width: 320px) and (max-width: 1024px) {
+    .convert_h1{
+        position: absolute;
+        left: 41%;
+        top: 5%;
+        color:  white;
+        font-size: 40px;
+    }
+
+    .convert_label{
         position: absolute;
         left: 44%;
-        top: 5%;
-        color:  white;
-        font-size: 40px;
-    }
-
-    .convert_label{
-        position: absolute;
-        left: 47%;
-        top: 32%;
-        background-color: black;
-        height: 70px;
-        width: 70px;
-        border-radius: 50%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 43px;
-        z-index: 1;
-    }
-  }
-
-@media (min-width: 320px) and (max-width: 768px) {
-    h1{
-        position: absolute;
-        left: 40%;
-        top: 5%;
-        color:  white;
-        font-size: 40px;
-    }
-
-    .convert_label{
-        position: absolute;
-        left: 45%;
         top: 32%;
         background-color: black;
         height: 70px;
@@ -252,7 +230,7 @@ h4{
         align-items: center;
     }
 
-    h2::before {
+    .convert_h2::before {
         content: "";
         position: absolute;
         left: -10%;

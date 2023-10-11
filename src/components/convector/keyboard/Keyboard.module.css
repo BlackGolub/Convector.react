@@ -52,23 +52,7 @@
     background: linear-gradient(to right, transparent, #d9d2d29e, transparent);
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .show{
-        opacity: 1;
-        position: absolute;
-        left: 25%;
-        top: 81.5%;
-        background-color: rgba(0, 0, 0, 0.987);
-        height: 31%;
-        width: 55%;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-    }
-  }
-
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1024px) {
     .show{
         opacity: 1;
         position: absolute;

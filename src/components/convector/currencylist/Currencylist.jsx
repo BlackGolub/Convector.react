@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Currencylist.module.css';
+import { Wallet } from '../../home/Wallet';
 
 const CurrencyList = ({ id, initialSelectedCurrency, updateSelectedCurrency }) => {
   const [showList, setShowList] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState(initialSelectedCurrency);
   
-  const currencies = ['USD', 'EUR', 'RUB', 'GEL', 'AMD'];
+  /* Получение списка валют */
+  const currencies = Array.from(new Set(Wallet.map(item => item.code)));
 
   /* Исключение выбранного элемента */
   const filteredCurrencies = currencies.filter(currency => currency !== selectedCurrency);
