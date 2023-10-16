@@ -24,7 +24,7 @@
     left: 10%;
     top: 15%;
     background-color:  rgba(231, 232, 187, 0.987);
-    height: 20%;
+    height: 185px;
     width: 80%;
     border-radius: 50px;
     display: flex;
@@ -89,7 +89,7 @@ h2::before {
     left: 10%;
     top: 37%;
     background-color:  rgb(229, 183, 234);
-    height: 20%;
+    height: 185px;
     width: 80%;
     border-radius: 50px;
     display: flex;

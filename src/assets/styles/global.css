@@ -8,4 +8,6 @@ html, body, #root {
     margin: 0;
     padding: 0;
     background-color: rgb(23, 23, 23);
+    height: calc(100% - HEIGHT_OF_SHOW_BLOCK + ADDITIONAL_HEIGHT);
+    overflow: auto;
   }

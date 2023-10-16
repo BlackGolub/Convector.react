@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
-import { Wallet, course } from './Wallet'
+import { Wallet, course } from './Wallet';
 import { Link } from "react-router-dom";
 import {BiSolidDownArrow} from 'react-icons/bi';
 import {PiArrowElbowRightUpBold, PiArrowDownBold} from 'react-icons/pi';
@@ -93,18 +93,18 @@ const Home = () => {
                     </ul>
             </div>
             <div className={styles.naw}>
-                <button className={styles.naw_button}>
+                <Link to='/transfer' className={styles.naw_button}>
                     <PiArrowElbowRightUpBold className={styles.naw_icon}/>
                     <p>Send</p>
-                </button>
+                </Link>
                 <Link to='/convector' className={styles.naw_button}>
                     <BsArrowLeftRight className={styles.naw_icon} />
                     <p>Convert</p>
                 </Link>
-                <button className={styles.naw_button}>
+                <Link to='/deposit' className={styles.naw_button}>
                     <PiArrowDownBold className={styles.naw_icon}/>
                     <p>Deposit</p>
-                </button>
+                </Link>
             </div>
             <h3 className={styles.total_h3}>My assets</h3>
             <div className={styles.assets_list}>

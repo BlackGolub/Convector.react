@@ -10,22 +10,19 @@ function Keyboard({ onButtonClick }) {
         const show_keyboard_elements = document.querySelectorAll(`[id="show_keyboard"]`);
         const keyboard = document.getElementById('show');
       
-    
         show_keyboard_elements.forEach(show_keyboard => {
-            show_keyboard.addEventListener("click", () => {
-                keyboard.classList.add(styles.show, "show"); 
-                window.scrollTo(0, keyboard.offsetTop + keyboard.clientHeight);
-            });
+          show_keyboard.addEventListener("click", () => {
+            keyboard.classList.add(styles.show, "show");
+          });
         });
       
         document.addEventListener("click", (event) => {
-            const clickedElement = event.target;
-            if (clickedElement !== keyboard && !Array.from(show_keyboard_elements).includes(clickedElement) && !keyboard.contains(clickedElement)) {
-                keyboard.classList.remove(styles.show, "show");
-                window.scrollTo(0, 0);
-            }
+          const clickedElement = event.target;
+          if (clickedElement !== keyboard && !Array.from(show_keyboard_elements).includes(clickedElement) && !keyboard.contains(clickedElement)) {
+            keyboard.classList.remove(styles.show, "show");
+          }
         });
-    }, []);
+      }, []);
 
     return(
         <div className={styles.keyboard} id='show'>

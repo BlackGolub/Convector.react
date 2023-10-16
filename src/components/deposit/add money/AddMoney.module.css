@@ -1,0 +1,111 @@
+.balance_h1{
+    position: absolute;
+    left: 46%;
+    top: 5%;
+    color:  white;
+    font-size: 40px;
+}
+
+.add_money{
+    margin-top: 150px;
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    background-color: #3b3939;
+    font-size: 50px;
+    width: 61px;
+    height: 57px;
+    border-radius: 18px;
+    color: white;
+}
+
+.replenishment{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    left: 6%;
+    background-color: #7fd2d5fa;
+    height: 30%;
+    width: 80%;
+    padding: 25px 60px;
+    border-radius: 30px;
+}
+
+.currency_balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currency_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.currency_number{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+    margin-right: 10px;
+}
+
+.full_name{
+    display: flex;
+    align-items: center;
+    font-size: 38px;
+}
+
+.currency_name{
+    display: flex;
+    align-items: center;
+    font-size: 38px;
+    width: 90px;
+}
+
+.code{
+    font-size: 30px;
+    opacity: 0.8;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.replenishment:last-child{
+    justify-content: flex-end;
+}
+
+.confirm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(180, 249, 180);
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .replenishment{
+        left: 0%;
+        height: 40%;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .code{
+        width: 100%;
+    }
+}

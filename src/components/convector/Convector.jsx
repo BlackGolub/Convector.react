@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
-import Home from '../home/HomePage';
 import Decimal from 'decimal.js';
 import styles from './Convector.module.css';
 import Keyboard from './keyboard/Keyboard.jsx';
@@ -117,7 +116,7 @@ function Convector () {
 
   return(
     <div className={styles.content}>
-      <Link to="/" element={<Home />} className={styles.back}><IoIosArrowBack /></Link>
+      <Link to="/" className={styles.back}><IoIosArrowBack /></Link>
       <h1 className={styles.convert_h1}>Convert</h1>
       <div className={styles.entering_currency}>
         <h2 className={styles.convert_h2}>Send</h2>
@@ -136,7 +135,7 @@ function Convector () {
         <Popup />
         <div className={`${styles.tax_lvl} ${isRed ? styles.red : ''}`}>40$</div>
       </div>
-      <Keyboard onButtonClick={handleButtonClick}/>
+      <Keyboard onButtonClick={handleButtonClick} setInputValue={setInputValue} inputValue={inputValue}/>
     </div>
   )
 }
