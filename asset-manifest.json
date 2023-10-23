@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Convector.react/static/css/main.74084cbd.css",
-    "main.js": "/Convector.react/static/js/main.fb8bfe6c.js",
+    "main.js": "/Convector.react/static/js/main.6ffdaeee.js",
     "static/media/card.png": "/Convector.react/static/media/card.7420118a7c5902f433da.png",
     "index.html": "/Convector.react/index.html",
     "main.74084cbd.css.map": "/Convector.react/static/css/main.74084cbd.css.map",
-    "main.fb8bfe6c.js.map": "/Convector.react/static/js/main.fb8bfe6c.js.map"
+    "main.6ffdaeee.js.map": "/Convector.react/static/js/main.6ffdaeee.js.map"
   },
   "entrypoints": [
     "static/css/main.74084cbd.css",
-    "static/js/main.fb8bfe6c.js"
+    "static/js/main.6ffdaeee.js"
   ]
 }
