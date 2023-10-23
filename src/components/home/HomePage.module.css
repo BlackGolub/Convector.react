@@ -1,17 +1,13 @@
 /* Аккаунт */
 .account{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 30px;
+    color: white;
 }
 
-.my_account{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    align-items: center;
+.user_name{
+    font-size: 40px;
 }
 
 .avatar{

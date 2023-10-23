@@ -22,7 +22,7 @@
 .entering_currency{
     position: absolute;
     left: 10%;
-    top: 15%;
+    top: 130px;
     background-color:  rgba(231, 232, 187, 0.987);
     height: 185px;
     width: 80%;
@@ -39,7 +39,7 @@
 .convert_label{
     position: absolute;
     left: 50%;
-    top: 32%;
+    top: 286px;
     background-color: black;
     height: 70px;
     width: 70px;
@@ -87,7 +87,7 @@ h2::before {
 .conclusion_currency{
     position: absolute;
     left: 10%;
-    top: 37%;
+    top: 330px;
     background-color:  rgb(229, 183, 234);
     height: 185px;
     width: 80%;
@@ -99,7 +99,7 @@ h2::before {
 
 .convert_h1{
     position: absolute;
-    left: 48%;
+    left: 47%;
     top: 5%;
     color:  white;
     font-size: 40px;
@@ -145,9 +145,9 @@ h4{
 .tax{
     position: absolute;
     left: 10%;
-    top: 70%;
+    top: 650px;
     background-color:  #3b3939;
-    height: 10%;
+    height: 90px;
     width: 80%;
     border-radius: 50px;
     display: flex;
@@ -167,78 +167,28 @@ h4{
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-    .convert_h1{
-        position: absolute;
-        left: 41%;
-        top: 5%;
-        color:  white;
-        font-size: 40px;
+    .convert_label{
+        left: 50%;
     }
 
-    .convert_label{
-        position: absolute;
-        left: 44%;
-        top: 32%;
-        background-color: black;
-        height: 70px;
-        width: 70px;
-        border-radius: 50%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 43px;
-        z-index: 1;
+    .convert_h1{
+        left: 46%;
     }
 
     .entering_currency{
-        position: absolute;
         left: 0%;
-        top: 15%;
-        background-color:  rgba(231, 232, 187, 0.987);
-        height: 185px;
         width: 100%;
-        border-radius: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: self-end;
     }
 
     .conclusion_currency{
-        position: absolute;
         left: 0%;
-        top: 37%;
-        background-color:  rgb(229, 183, 234);
-        height: 185px;
         width: 100%;
-        border-radius: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: self-end;
     }
 
     .tax{
-        position: absolute;
         left: 0%;
-        top: 70%;
-        background-color:  #3b3939;
-        height: 10%;
         width: 100%;
-        border-radius: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
-
-    .convert_h2::before {
-        content: "";
-        position: absolute;
-        left: -10%;
-        top: 281%;
-        width: 200px;
-        height: 2px;
-        background: linear-gradient(to right, transparent, #000, transparent);
-      }
 
     .entering_left {
         background-color: transparent;

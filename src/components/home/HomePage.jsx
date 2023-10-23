@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import { Wallet, course } from './Wallet';
 import { Link } from "react-router-dom";
-import {BiSolidDownArrow} from 'react-icons/bi';
 import {PiArrowElbowRightUpBold, PiArrowDownBold} from 'react-icons/pi';
 import {BsArrowLeftRight} from 'react-icons/bs';
 import {HiArrowPathRoundedSquare} from 'react-icons/hi2'
@@ -69,12 +68,8 @@ const Home = () => {
     return(
         <div className={styles.home_pages}>
             <div className={styles.account}>
-                <div className={styles.my_account}>
-                    <img src="/Convector.react/images/avatar.jpg" className={styles.avatar} alt="avatar" />
-                    <p>myvallet.fr.id</p>
-                    <button className={styles.account_button}><BiSolidDownArrow /></button>
-                </div>
-                <button className={styles.share_button}>share</button>
+                    <img src="/GIT.Convector/public/images/avatar.jpg" className={styles.avatar} alt="avatar" />
+                    <p className={styles.user_name}>UserName</p>
             </div>
             <div className={styles.total_wallet}>
                 <div className={styles.total_info}>

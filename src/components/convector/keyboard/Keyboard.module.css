@@ -5,9 +5,9 @@
 .show{
     position: absolute;
     left: 28.5%;
-    top: 81.5%;
+    top: 760px;
     background-color: rgba(0, 0, 0, 0.987);
-    height: 31%;
+    height: 290px;
     width: 43%;
     border-radius: 20px;
     display: flex;

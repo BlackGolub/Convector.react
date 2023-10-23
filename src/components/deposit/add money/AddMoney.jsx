@@ -9,10 +9,12 @@ const AddMoney = () => {
   const [inputValue, setInputValue] = useState(Wallet[0].balance);
   const currency = Wallet[0]
 
+  /* Форматирование ввода */
   const formatValue = (value) => {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
 
+  /* Функция клавиатуры */
   const handleButtonClick = (event) => {
     let clickedValue = event.currentTarget.getAttribute('value');
     let newInputValue = inputValue;
@@ -25,10 +27,10 @@ const AddMoney = () => {
     setInputValue(newInputValue);
   };
 
+  /* Подтвердить, выйти на главную*/
   const handleConfirm = () => {
     const newValue = parseFloat(inputValue.replace(/ /g, ''));
     Wallet[0].balance = newValue;
-    setInputValue('');
   };
 
   return(
@@ -52,7 +54,7 @@ const AddMoney = () => {
               <p className={styles.currency_name}>{currency.code}</p>
             </div>
           </div>
-          <button className={styles.confirm} onClick={handleConfirm}>Confirm</button>
+          <Link to="/" className={styles.confirm} onClick={handleConfirm}>Confirm</Link>
         </div>
         <Keyboard onButtonClick={handleButtonClick}/>
     </div>

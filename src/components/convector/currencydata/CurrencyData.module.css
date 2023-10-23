@@ -20,9 +20,9 @@
 .wallet{
     position: absolute;
     left: 10%;
-    top: 59%;
+    top: 550px;
     background-color:  #3b3939;
-    height: 10%;
+    height: 90px;
     width: 80%;
     border-radius: 50px;
     display: flex;
@@ -91,15 +91,7 @@
 
 @media (min-width: 320px) and (max-width: 1024px) {
     .wallet{
-        position: absolute;
         left: 0%;
-        top: 59%;
-        background-color:  #3b3939;
-        height: 10%;
         width: 100%;
-        border-radius: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 }

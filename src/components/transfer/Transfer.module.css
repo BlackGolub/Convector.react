@@ -24,17 +24,25 @@
 
 /* Блок трансфера */
 
-.transfer_block{
+.transfer{
     position: absolute;
     left: 5%;
     top: 15%;
-    background-color: rgba(61, 62, 61, 0.987);
+    background-color: rgba(100, 154, 100, 0.987);
     height: 555px;
     width: 85%;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     padding: 30px;
+}
+
+.transfer_block{
+    display: flex;
+    background: linear-gradient(to right, rgb(138, 204, 138), rgba(233, 231, 231, 0.594));
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .your_account{
@@ -72,11 +80,49 @@
     margin-left: 10px;
 }
 
+
+/* Блок получателя */
+.recipient_account{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.target_header{
+    font-size: 50px;
+}
+
+.target_info{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.transfer_type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 65px;
+    margin-right: 10px;
+}
+
+.target_wallet{
+    font-size: 22px;
+    width: 60%;
+}
+
 .transfer_volume{
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 133px;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .transfer_value{
@@ -116,20 +162,86 @@
 .handleCurrencySelect{
     display: block;
     font-size: 30px;
-    background-color: rgb(97 119 215);
+    background-color: rgb(139 189 145);
     border-radius: 15px;
+    border: solid 1px black;
     list-style: none;
     padding: 0 10px;
+    z-index: 2;
 }
 
-.recipient_account{
+
+/* История переводов */
+
+.history{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+}
+
+.story_list{
+    display: block;
+    background-color: rgb(138, 204, 138);
+    border: solid 1px black;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+.story_list::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  
+.story_list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.users_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.users_img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.users_transfer{
+    display: flex;
+    flex-direction: row;
+}
+
+.confirm_transfer{
+    position: absolute;
+    top: 549px;
+    right: 7%;
+    font-size: 30px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.transfer_value_history{
+    margin-right: 10px;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
-    .transfer_block{
+    .transfer{
         left: 0%;
         height: 555px;
         width: 100%;
@@ -138,6 +250,10 @@
 
     .user_block{
         font-size: 16px;
+    }
+
+    .target_header{
+        font-size: 32px;
     }
 
     .user_balance, .transfer_transfer{
@@ -163,5 +279,17 @@
     .handleCurrencySelect{
         font-size: 24px;
         padding: 0;
+        border-radius: 5px;
+    }
+
+    .confirm_transfer{
+        top: 543px;
+        right: 20px;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+    .transfer_volume{
+        top: 100px;
     }
 }
