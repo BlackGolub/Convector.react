@@ -1,10 +1,10 @@
 /* Значение кошелька */
 const Wallet  = [
-        { code: 'USD', full_name: 'Dollar USA', balance: 2950, image: '/GIT.Convector/public/images/USD.png' },
-        { code: 'EUR', full_name: 'Euro', balance: 1800, image: '/GIT.Convector/public/images/EUR.png' },
-        { code: 'RUB', full_name: 'Ruble', balance: 600000, image: '/GIT.Convector/public/images/RUB.png' },
-        { code: 'GEL', full_name: 'Lari', balance: 39000, image: '/GIT.Convector/public/images/GEL.png' },
-        { code: 'AMD', full_name: 'Dram', balance: 400850, image: '/GIT.Convector/public/images/AMD.png' }
+        { code: 'USD', full_name: 'Dollar USA', balance: 2950, image: './public/images/USD.png' },
+        { code: 'EUR', full_name: 'Euro', balance: 1800, image: './public/images/EUR.png' },
+        { code: 'RUB', full_name: 'Ruble', balance: 600000, image: './public/images/RUB.png' },
+        { code: 'GEL', full_name: 'Lari', balance: 39000, image: './public/images/GEL.png' },
+        { code: 'AMD', full_name: 'Dram', balance: 400850, image: './public/images/AMD.png' }
 ]
 
 
