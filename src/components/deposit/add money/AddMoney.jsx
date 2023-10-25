@@ -21,7 +21,7 @@ const AddMoney = () => {
   
     if (clickedValue === 'null') {
       newInputValue = newInputValue.toString().slice(0, -1);
-    } else if (clickedValue !== '.') {
+    } else if (clickedValue !== '.' && (newInputValue.toString().split('.')[1] || []).length < 2) {
       newInputValue = newInputValue + clickedValue;
     }
     setInputValue(newInputValue);
@@ -56,7 +56,7 @@ const AddMoney = () => {
           </div>
           <Link to="/" className={styles.confirm} onClick={handleConfirm}>Confirm</Link>
         </div>
-        <Keyboard onButtonClick={handleButtonClick}/>
+        <Keyboard onButtonClick={handleButtonClick} />
     </div>
   )
 }

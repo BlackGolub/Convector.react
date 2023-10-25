@@ -1,7 +1,7 @@
 .balance_h1{
     position: absolute;
     left: 46%;
-    top: 5%;
+    top: 40px;
     color:  white;
     font-size: 40px;
 }
@@ -17,7 +17,7 @@
     text-decoration: none;
     position: absolute;
     left: 5%;
-    top: 5%;
+    top: 40px;
     background-color: #3b3939;
     font-size: 50px;
     width: 61px;
@@ -101,6 +101,10 @@
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
+    .back{
+        left: 40px;
+    }
+
     .replenishment{
         left: 0%;
         width: 100%;
