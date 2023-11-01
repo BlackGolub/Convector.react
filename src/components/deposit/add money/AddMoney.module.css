@@ -43,6 +43,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10px;
+}
+
+.info{
+    padding: 0 10px;
 }
 
 .currency_info{
@@ -98,6 +103,7 @@
     text-decoration: none;
     color: black;
     border: solid 1px black;
+    margin: 0 10px;
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {

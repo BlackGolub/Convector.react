@@ -68,7 +68,7 @@ const Home = () => {
     return(
         <div className={styles.home_pages}>
             <div className={styles.account}>
-                    <img src="./Convector.react/images/avatar.jpg" className={styles.avatar} alt="avatar" />
+                    <img src="/Convector.react/images/avatar.jpg" className={styles.avatar} alt="avatar" />
                     <p className={styles.user_name}>UserName</p>
             </div>
             <div className={styles.total_wallet}>

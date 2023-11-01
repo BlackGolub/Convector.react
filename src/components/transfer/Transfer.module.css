@@ -27,7 +27,7 @@
 .transfer{
     position: absolute;
     left: 5%;
-    top: 15%;
+    top: 140px;
     background-color: rgba(100, 154, 100, 0.987);
     height: 555px;
     width: 85%;
@@ -248,7 +248,6 @@
 
     .transfer{
         left: 0%;
-        height: 555px;
         width: 100%;
         padding: 20px 0;
     }

@@ -125,7 +125,7 @@ const Transfer = () => {
                 <div className={styles.transfer_block}>
                     <div className={styles.your_account}>
                         <div className={styles.user_block}>
-                            <img src="./Convector.react/images/avatar.jpg" className={styles.avatar} alt="avatar"/>
+                            <img src="/Convector.react/images/avatar.jpg" className={styles.avatar} alt="avatar"/>
                             <div className={styles.user_info}>
                                 <h1 className={styles.user_name}>Name: User</h1>
                                 <p className={styles.user_number}>Account number:<br/> 9324 2834 9527 1743</p>
